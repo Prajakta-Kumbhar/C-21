@@ -1,0 +1,24 @@
+function isTouching(object1, object2)
+{
+  if((object1.x - object2.x) <= (object1.width + object2.width)/2
+  && (object2.x - object1.x) <= (object1.width + object2.width)/2 
+  && (object1.y - object2.y) <= (object1.height + object2.height)/2
+  && (object2.y - object1.y) <= (object1.height + object2.height)/2 )
+  {
+   return true;
+  }
+  else
+  {
+    return false;
+  }
+
+}
+
+function bounceOff(object3, object4)
+{
+  if (( object3.x - object4.x ) <= (object3.width + object4.width)/2
+  && ( object4.x - object3.x) <= (object4.width + object3.width)/2 )
+  {
+    object3.velocityX = - 1*object3.velocityX ;
+  }
+}
